@@ -1,45 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="/alura-icon.svg" />
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encrypter</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/x-icon" href="/public/alura-icon.svg" />
-  <link rel="stylesheet" href="style.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Encrypter</title>
-</head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="header-img">
+          <img src="/alura-icon.svg" alt="alura-logo" />
+        </div>
+      </header>
 
-<body>
-  <header>
-    <img src="/public/alura-icon.svg" alt="alura-logo">
-  </header>
+      <section class="input-section">
+        <form class="input-form">
+          <div class="text-input">
+            <textarea
+              name="text-input"
+              id="textInput"
+              cols="30"
+              rows="10"
+              placeholder="Ingrese el texto aqui"
+            ></textarea>
+          </div>
 
-  <section class="input-section">
-    <textarea name="text-input" id="textInput" cols="30" rows="10" placeholder="Ingrese el texto aqui"></textarea>
+          <div class="text-area-disclaimer">
+            <img src="/exclamation-icon.svg" alt="exclamation-icon" />
+            <p>Solo letras minúsculas y sin acentos</p>
+          </div>
 
-    <div class="textarea-disclaimer">
-      <h4>Solo letras minúsculas y sin acentos</h6>
+          <div class="buttons-container">
+            <button type="button" class="encrypt-button">Encriptar</button>
+            <button type="button" class="decrypt-button">Desencriptar</button>
+          </div>
+        </form>
+      </section>
+
+      <aside class="output-section">
+        <div class="empty-text-info">
+          <img src="/aside-icon.svg" alt="aside-icon" />
+          <div class="empty-text-disclaimer">
+            <p>Ningún mensaje fue encontrado</p>
+            <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+          </div>
+        </div>
+      </aside>
     </div>
-
-    <div class="buttons-container">
-      <button type="button" class="encrypt-button">Encriptar</button>
-      <button type="button" class="decrypt-button">Desencriptar</button>
-    </div>
-  </section>
-
-  <aside class="output-section">
-    <div class="empty-text-info">
-      <img src="/public/aside-icon.svg" alt="aside-icon">
-      <div class="empty-text-disclaimer">
-        <p>Ningún mensaje fue encontrado</p>
-        <p>Ingresa el texto que desees encriptar o desencriptar.</p>
-      </div>
-    </div>
-  </aside>
-
-  <footer>
-    <p>Developed by Javier Guerra</p>
-    <a href="https://github.com/jwar28" target="_blank"><img class="icon_github" src="./public/icon-github.png" alt="GitHub"></a>
-  </footer>
-
+  </body>
 </html>

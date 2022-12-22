@@ -26,4 +26,5 @@ Las llaves de encriptacion solicitadas son las siguientes:
 
 ## Ejemplo
 "gato" => "gaitober"
+
 "gaitober" => "gato"

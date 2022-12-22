@@ -1,4 +1,4 @@
-import { encryptText, decryptText } from "../js/encrypter.js";
+import { encryptText, decryptText, normalizeText } from "../js/utils.js";
 
 const textareaInitialInput = document.getElementById("text-initial-input");
 const textareaFinalOutput = document.getElementById("text-final-output");
@@ -12,7 +12,7 @@ const copyButton = document.getElementById("copy-button");
 
 const updateOutputTextarea = (func) => {
   const text = textareaInitialInput.value;
-  const transformedText = func(text);
+  const transformedText = func(normalizeText(text));
   textareaFinalOutput.value = transformedText;
 
   defaultOutput.classList.add("invisible");

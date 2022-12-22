@@ -1,4 +1,4 @@
-import { encryptText, decryptText } from "./encrypter.js";
+import { encryptText, decryptText } from "./encrypter";
 
 const textareaInitialInput = document.getElementById("text-initial-input");
 const textareaFinalOutput = document.getElementById("text-final-output");

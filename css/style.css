@@ -199,6 +199,7 @@ body {
 
 #final-output {
   width: 100%;
+  animation: fade_in 1.5s;
 }
 
 #text-final-output {

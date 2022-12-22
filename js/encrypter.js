@@ -1,4 +1,4 @@
-export const encryptText = (text) => {
+export function encryptText(text) {
   const mapping = {
     e: "enter",
     i: "imes",
@@ -8,9 +8,9 @@ export const encryptText = (text) => {
   };
 
   return text.replace(/[eiaou]/g, (letter) => mapping[letter]);
-};
+}
 
-export const decryptText = (text) => {
+export function decryptText(text) {
   const mapping = {
     enter: "e",
     imes: "i",
@@ -23,4 +23,4 @@ export const decryptText = (text) => {
     /enter|imes|ai|ober|ufat/g,
     (encryptedLetter) => mapping[encryptedLetter],
   );
-};
+}

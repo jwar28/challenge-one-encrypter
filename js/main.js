@@ -10,17 +10,21 @@ const encryptButton = document.getElementById("encrypt-button");
 const decryptButton = document.getElementById("decrypt-button");
 const copyButton = document.getElementById("copy-button");
 
-const removeDefaultOutput = () => {
+const updateOutputTextarea = (func) => {
+  const text = textareaInitialInput.value;
+  const transformedText = func(text);
+  textareaFinalOutput.value = transformedText;
+
   defaultOutput.classList.add("invisible");
   finalOutput.classList.remove("invisible");
 };
 
-const encryptInputText = () => {
-  const text = textareaInitialInput.value;
-  if (text !== "") {
-    textareaFinalOutput.value = encryptText(text);
-    removeDefaultOutput();
-  }
-};
-
-encryptButton.addEventListener("click", encryptInputText);
+encryptButton.addEventListener("click", () =>
+  updateOutputTextarea((text) => encryptText(text)),
+);
+decryptButton.addEventListener("click", () =>
+  updateOutputTextarea((text) => decryptText(text)),
+);
+copyButton.addEventListener("click", () => {
+  navigator.clipboard.writeText(textareaFinalOutput.value);
+});

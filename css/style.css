@@ -10,8 +10,19 @@ body {
   letter-spacing: 0em;
 }
 
+@keyframes fade_in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 .header-img {
   position: absolute;
+  animation: fade_in 2s;
 }
 
 .header-img > img {
@@ -36,6 +47,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  animation: fade_in 2s;
 }
 
 .input-form {
@@ -54,6 +67,7 @@ body {
   font-family: Inter, sans-serif;
   margin-top: 110px;
   font-size: 32px;
+  line-height: 48px;
   color: #0a3871;
   background-color: transparent;
   resize: none;
@@ -121,7 +135,7 @@ body {
 
 .buttons-container > button:last-child {
   margin-left: 12px;
-  background-color: #d8dfe8;
+  background-color: transparent;
   color: #0a3871;
 }
 
@@ -142,6 +156,7 @@ body {
 
   box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
   border-radius: 32px;
+  animation: fade_in 2s;
 }
 
 .empty-text-info {
@@ -182,6 +197,49 @@ body {
   color: #495057;
 }
 
+#final-output {
+  width: 100%;
+}
+
+#text-final-output {
+  flex-basis: calc(100% - 155px);
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 36px;
+  line-height: 150%;
+  color: #495057;
+  background-color: transparent;
+  resize: none;
+  border: none;
+}
+
+#copy-button {
+  flex-basis: 10%;
+  background-color: transparent;
+  border: 1px solid #0a3871;
+  border-radius: 24px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  transform: scale(1);
+  transition: transform 0.2s;
+}
+
+#copy-button:hover {
+  transform: scale(1.05);
+}
+
+#copy-button:last-child:active {
+  color: #fff;
+  background-color: #000;
+}
+
+.invisible {
+  display: none;
+}
+
 @media screen and (max-width: 900px) {
   .header-img {
     position: absolute;
@@ -219,7 +277,7 @@ body {
 }
 
 @media screen and (max-width: 400px) {
-  .header-img > img{
+  .header-img > img {
     position: absolute;
     top: 0;
     left: -25px;
@@ -232,7 +290,7 @@ body {
 
   .output-section {
     width: calc(100% - 32px);
-    margin-top: 300px;
+    margin-top: 250px;
   }
 
   .buttons-container {

@@ -10,10 +10,14 @@ const encryptButton = document.getElementById("encrypt-button");
 const decryptButton = document.getElementById("decrypt-button");
 const copyButton = document.getElementById("copy-button");
 
-const updateOutputTextarea = (func) => {
+const processInitialText = (func) => {
   const text = textareaInitialInput.value;
   const transformedText = func(normalizeText(text));
-  textareaFinalOutput.value = transformedText;
+  return transformedText;
+}
+
+const updateOutputTextarea = (func) => {
+  textareaFinalOutput.value = processInitialText(func);
 
   defaultOutput.classList.add("invisible");
   finalOutput.classList.remove("invisible");
